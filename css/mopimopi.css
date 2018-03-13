@@ -1,0 +1,491 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0
+}
+
+td,
+tr,
+th,
+tbody,
+table {
+    padding: 0;
+    border-radius: 0
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-attachment: fixed;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+    cursor: default;
+}
+
+.toolbtn {
+    margin: 1px;
+}
+
+::-webkit-scrollbar,
+scrollbar {
+    width: 0;
+    height: 0
+}
+
+div,
+.quantity input {
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    vertical-align: middle
+}
+
+p {
+    padding-left: 7rem;
+}
+
+.navbar_text {
+    cursor: move;
+    -webkit-app-region: drag;
+    overflow: hidden;
+    white-space: nowrap;
+    table-layout: fixed;
+    width: auto;
+    position: fixed;
+    z-index: 0
+}
+
+.move {
+    cursor: move;
+    -webkit-app-region: drag;
+    position: fixed;
+    z-index: 0
+}
+
+.topbarText {
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.6rem;
+    padding-left: 6rem;
+}
+
+#dataAbbWrap {
+    width: 100%;
+}
+
+#dataAbbWrap .element {
+    margin: 0 0.5rem 1rem 0.5rem;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+#dataAbbWrap .element > table td {
+    table-layout: fixed;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(255, 255, 255, .38);
+    padding-bottom: .5rem;
+}
+
+.arrow {
+    width: 5rem;
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
+.remove {
+    width: 5rem;
+    padding-top: 0.5rem;
+    text-align: right;
+    cursor: pointer;
+    color: rgba(255, 255, 255, .38);
+}
+
+.remove:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.abbVal {
+    width: 10rem;
+}
+
+.realVal {
+    width: 20rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#dpsOrderWrap,
+#hpsOrderWrap {
+    border: 1px solid rgba(255, 255, 255, .12);
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    width: 100%;
+}
+
+#dpsOrderWrap .element,
+#hpsOrderWrap .element {
+    margin-bottom: 0.5rem;
+    background-color: #212121;
+    border: 1px solid rgba(255, 255, 255, .12);
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.indexName {
+    cursor: ns-resize;
+    width: -webkit-calc(100% - 10rem);
+    padding-left: 1rem;
+}
+
+.Ubtn, .Dbtn {
+    width: 5rem;
+    height: 3rem;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+.Ubtn:hover,
+.Dbtn:hover {
+    background: rgba(0, 0, 0, .1)
+}
+
+.hidden {
+    display: none;
+}
+
+.time {
+    font-size: 3rem;
+    padding: 0 1rem;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Montserrat'
+}
+
+.info {
+    padding: 0;
+    line-height: 0;
+}
+
+td.info,
+td.topbarText {
+    width: 100% !important;
+}
+
+.bigText {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin-top: .2rem
+}
+
+.smallText {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    padding-top: .2rem
+}
+
+ul.right,
+ul.left {
+    position: relative;
+    z-index: 1
+}
+
+ul.dropdown-content div {
+    padding: 0 1.6rem;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.6rem
+}
+
+ul.dropdown-content div i {
+    height: 5rem;
+    line-height: 5rem
+}
+
+.contents {
+    background: #303030
+}
+
+.tile {
+    width: 100%;
+    padding: 1.6rem;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    line-height: 1.5
+}
+
+.TitleText {
+    color: rgba(255, 255, 255, .7);
+    font-size: 1.2rem;
+    padding: 1.6rem
+}
+
+.PrimaryText {
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.4rem
+}
+
+.SecondaryText {
+    color: rgba(255, 255, 255, .7);
+    font-size: 1.2rem;
+    padding-top: .4rem;
+    white-space: pre-line
+}
+
+.rangeText {
+    position: absolute;
+    color: rgba(255, 255, 255, .12)
+}
+
+.iconText i {
+    color: rgba(255, 255, 255, .38);
+    float: left
+}
+
+.circle img {
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 1rem
+}
+
+#zone {
+    width: 100%;
+    height: 100%;
+}
+
+#wrap {
+    clear: both;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.tableHeader,
+.tableBody {
+    width: 100%;
+    color: #fff;
+    table-layout: fixed;
+    border-collapse: collapse;
+    z-index: 5
+}
+
+.tableBody {
+    position: absolute;
+    z-index: 4
+}
+
+.tableBody td {
+    text-shadow: 0 0 .3rem #000;
+    font-size: 1.2rem;
+    height: 2.1rem
+}
+
+.tableHeader td {
+    font-size: 1.1rem;
+    font-family: 'Roboto Condensed';
+    height: 1.5rem
+}
+
+.bar {
+    position: absolute;
+    z-index: 2;
+    height: 2.1rem
+}
+
+.barHeal,
+.barDeal {
+    height: 2.1rem;
+    position: relative
+}
+
+.barBg {
+    z-index: 1;
+    width: 100%;
+    height: 2.1rem
+}
+
+#hpsTableHeader,
+#hpsRaidTable {
+    margin-top: 2rem
+}
+
+.narrowCell1,
+.narrowCell2,
+.timeCell,
+.wideCell1,
+.wideCell2,
+.nameCell,
+.iconCell,
+.viewCell {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    text-align: center;
+    vertical-align: middle
+}
+
+.iconCell {
+    width: 2.2rem
+}
+
+.viewCell {
+    width: 2.8rem
+}
+
+.nameCell {
+    width: 100%;
+    text-align: left;
+    padding-left: .2rem
+}
+
+.pngIcon {
+    width: 2rem;
+}
+
+#historyListBody table:hover {
+    cursor: pointer
+}
+
+#previewH td,
+#previewB td {
+    border: solid .1rem #000
+}
+
+#previewB td {
+    border-top: 0
+}
+
+#previewB {
+    position: static
+}
+
+.previewImage {
+    padding: 1.6rem;
+    background-image: url(../images/bg.jpg);
+    background-repeat: repeat
+}
+
+#previewTopbar {
+    overflow: hidden;
+    table-layout: fixed;
+    white-space: nowrap
+}
+
+.quantity input {
+    width: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 1rem;
+    font-family: 'Montserrat'
+}
+
+td.quantity {
+    overflow: hidden;
+    white-space: nowrap;
+    table-layout: fixed;
+    padding-right: 0.75rem;
+}
+
+.btn-floating {
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem
+}
+
+.btn-floating i {
+    line-height: 4rem
+}
+
+.collapsible li:hover,
+.collapsible li.active,
+.collapsible-header li.active:hover,
+.collapsible-header.active:hover {
+    outline: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent
+}
+
+.divBody {
+    table-layout: fixed
+}
+
+.borderline {
+    border-right: 1px solid rgba(255, 255, 255, .12)
+}
+
+.userbox {
+    font-size: 1.2rem;
+    text-shadow: 0 0 .3rem #000;
+    line-height: 1.4rem
+}
+
+.raidName {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip
+}
+
+.value {
+    text-align: right;
+    font-size: 1.2rem;
+    padding-right: .25rem
+}
+
+.raid .collapsible-header.row .col {
+    padding: 0
+}
+
+.raid .collapsible-body.row .col {
+    padding: 0 .25rem 0 .5rem;
+    font-family: "Roboto Condensed";
+    font-size: 1.1rem
+}
+
+.row .col.s13 {
+    width: 20%;
+    margin-left: auto;
+    left: auto;
+    right: auto
+}
+
+.animated {
+    -webkit-animation-duration: .75s;
+    animation-duration: .75s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+@-webkit-keyframes flash {
+    from, 50%, to {
+        opacity: 1
+    }
+    25%,
+    75% {
+        opacity: 0
+    }
+}
+
+@keyframes flash {
+    from, 50%, to {
+        opacity: 1
+    }
+    25%,
+    75% {
+        opacity: 0
+    }
+}
+
+.flash {
+    -webkit-animation-name: flash;
+    animation-name: flash
+}
