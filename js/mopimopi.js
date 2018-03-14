@@ -91,6 +91,7 @@ var inputSettings = {
     timeFont: 'Montserrat',
     krFont: 'Segoe UI',
     cnFont: '微软雅黑',
+    ctFont: '微软雅黑',
     jpFont: 'Meiryo',
     enFont: 'Roboto',
     deFont: 'Segoe UI',
@@ -497,7 +498,7 @@ function dataRestore() {
 
 function dataShare() {
     var data = new Object();
-    var set = ['meBold', 'otherBold', 'border', 'edge', 'youColor', 'petAction', 'line', 'gradation', 'animation', 'go', 'bo', 'to', 'ho', 'lo', 'narrowCell1', 'narrowCell2', 'wideCell1', 'wideCell2', 'topbarHeight', 'btnFontSize', 'timeFont', 'krFont', 'cnFont', 'jpFont', 'enFont', 'indexFont'];
+    var set = ['meBold', 'otherBold', 'border', 'edge', 'youColor', 'petAction', 'line', 'gradation', 'animation', 'go', 'bo', 'to', 'ho', 'lo', 'narrowCell1', 'narrowCell2', 'wideCell1', 'wideCell2', 'topbarHeight', 'btnFontSize', 'timeFont', 'krFont', 'cnFont', 'ctFont', 'jpFont', 'enFont', 'indexFont'];
     for (var i in palette) {
         data[i] = localStorage.getItem(i)
     }
@@ -517,6 +518,8 @@ $("input#apply").keydown(function () {
                 alert("지정한 값이 올바른 형식이 아닙니다.");
             else if (localStorage.getItem("lang") == "cn")
                 alert("指定值类型无效。");
+            else if (localStorage.getItem("lang") == "ct")
+                alert("無效的指定值類型。");
             else alert("The value specified is not a valid type.")
         }
         if (response && typeof response == 'object') {
@@ -694,6 +697,8 @@ function autoHidden(flag) {
                             var $toastContent = $('<div class="row col s12 white-text center">< 자동 숨기기 ><br>데이터 테이블을 다시 보고 싶다면 오버레이를 클릭하세요!</div>');
                         else if (localStorage.getItem("lang") == "cn")
                             var $toastContent = $('<div class="row col s12 white-text center">｛自动隐藏｝<br>想再次查看数据图表？只需点击悬浮窗口！</div>');
+                        else if (localStorage.getItem("lang") == "ct")
+                            var $toastContent = $('<div class="row col s12 white-text center">｛自動隱藏｝<br>希望再次查看數據表？僅需點擊美化窗口！</div>');
                         else if (localStorage.getItem('lang') == "en")
                             var $toastContent = $('<div class="row col s12 white-text center">< Auto-hide ><br>Do you want to view data table again? Just Click on the Overlay!</div>'); else var $toastContent = $('<div class="row col s12 white-text center">< Auto-hide ><br>Do you want to view data table again? Just Click on the Overlay!</div>');
                         Materialize.toast($toastContent, 3000)
@@ -1105,6 +1110,8 @@ function buttonCotrol(obj) {
                 setTimeout(function () {
                     if (localStorage.getItem('lang') == "cn")
                         var $toastContent = $('<div class="row col s12 white-text center">< 图像路径 ><br>ACT目录\\ScreenShot</div>');
+                    else if (localStorage.getItem('lang') == "ct")
+                        var $toastContent = $('<div class="row col s12 white-text center">< 圖像路徑 ><br>ACT目録\\ScreenShot</div>');
                     else
                         var $toastContent = $('<div class="row col s12 white-text center">< Image Path ><br>Advanced Combat Tracker or ACTv3\\ScreenShot</div>');
                     Materialize.toast($toastContent, 3000)
@@ -1271,12 +1278,13 @@ function radioButtonCotrol(id) {
                 $('body').find('[lang=kr]').removeClass('hidden');
                 $('body').find('[lang=en]').addClass('hidden');
                 $('body').find('[lang=cn]').addClass('hidden');
+                $('body').find('[lang=ct]').addClass('hidden');
             } else if (id == 'cn') {
                 localStorage.setItem('lang', 'cn');
                 mpLang = mpCN;
                 $('html').attr('lang', 'cn');
                 settingsFont();
-                $('#r_Lang').text('中文');
+                $('#r_Lang').text('简体中文');
                 $('#capture a').attr('data-tooltip', '截图 (仅限PC)');
                 $('#endEncounter a').attr('data-tooltip', '结束战斗记录');
                 $('#more a').attr('data-tooltip', '更多');
@@ -1284,6 +1292,21 @@ function radioButtonCotrol(id) {
                 $('body').find('[lang=cn]').removeClass('hidden');
                 $('body').find('[lang=kr]').addClass('hidden');
                 $('body').find('[lang=en]').addClass('hidden');
+                $('body').find('[lang=ct]').addClass('hidden');
+            } else if (id == 'ct') {
+                localStorage.setItem('lang', 'ct');
+                mpLang = mpCT;
+                $('html').attr('lang', 'ct');
+                settingsFont();
+                $('#r_Lang').text('正體中文');
+                $('#capture a').attr('data-tooltip', '截圖 (PC專用)');
+                $('#endEncounter a').attr('data-tooltip', '結束戰鬥統計');
+                $('#more a').attr('data-tooltip', '更多');
+                $('body').find('.scrollbtn a').attr('data-tooltip', '滾動');
+                $('body').find('[lang=ct]').removeClass('hidden');
+                $('body').find('[lang=kr]').addClass('hidden');
+                $('body').find('[lang=en]').addClass('hidden');
+                $('body').find('[lang=cn]').addClass('hidden');
             }else if (id == 'jp') {
                 localStorage.setItem('lang', 'jp');
                 $('html').attr('lang', 'jp');
@@ -1297,6 +1320,7 @@ function radioButtonCotrol(id) {
                 $('body').find('[lang=en]').removeClass('hidden');
                 $('body').find('[lang=kr]').addClass('hidden');
                 $('body').find('[lang=cn]').addClass('hidden');
+                $('body').find('[lang=ct]').addClass('hidden');
             } else if (id == 'de') {
                 localStorage.setItem('lang', 'de');
                 $('html').attr('lang', 'de');
@@ -1309,6 +1333,8 @@ function radioButtonCotrol(id) {
                 $('#r_Lang').text('Deutsch');
                 $('body').find('[lang=en]').removeClass('hidden');
                 $('body').find('[lang=kr]').addClass('hidden')
+                $('body').find('[lang=cn]').addClass('hidden')
+                $('body').find('[lang=ct]').addClass('hidden')
             } else {
                 localStorage.setItem('lang', 'en');
                 $('html').attr('lang', 'en');
@@ -1322,6 +1348,7 @@ function radioButtonCotrol(id) {
                 $('body').find('[lang=en]').removeClass('hidden');
                 $('body').find('[lang=kr]').addClass('hidden');
                 $('body').find('[lang=cn]').addClass('hidden');
+                $('body').find('[lang=ct]').addClass('hidden');
             }
             for (var i in mpLang)
                 $('[name="' + i + '"]').html(mpLang[i]);
@@ -1347,6 +1374,7 @@ function settingsFont() {
     var change_krFont = $("[name=krFont]").val();
     var change_enFont = $("[name=enFont]").val();
     var change_cnFont = $("[name=cnFont]").val();
+    var change_ctFont = $("[name=ctFont]").val();
     var change_jpFont = $("[name=jpFont]").val();
     var change_deFont = $("[name=deFont]").val();
     if (change_timeFont == "")
@@ -1359,12 +1387,15 @@ function settingsFont() {
         localStorage.setItem('jpFont', 'Meiryo'); else localStorage.setItem('jpFont', change_jpFont);
     if (change_cnFont == "")
         localStorage.setItem('cnFont', '微软雅黑'); else localStorage.setItem('cnFont', change_cnFont);
+    if (change_ctFont == "")
+        localStorage.setItem('ctFont', '微软雅黑'); else localStorage.setItem('ctFont', change_ctFont);
     if (change_enFont == "")
         localStorage.setItem('enFont', 'Roboto'); else localStorage.setItem('enFont', change_enFont);
     if (change_deFont == "")
         localStorage.setItem('deFont', 'Segoe UI'); else localStorage.setItem('deFont', change_deFont);
     $(":lang(kr)").css("font-family", "'" + change_krFont + "', 'Segoe UI', sans-serif");
     $(":lang(cn)").css("font-family", "'" + change_cnFont + "', '微软雅黑', sans-serif");
+    $(":lang(ct)").css("font-family", "'" + change_ctFont + "', '微软雅黑', sans-serif");
     $(":lang(jp)").css("font-family", "'" + change_jpFont + "', 'Meiryo', sans-serif");
     $(":lang(en)").css("font-family", "'" + change_enFont + "', 'Roboto', sans-serif");
     $(":lang(de)").css("font-family", "'" + change_deFont + "', 'Segoe UI', sans-serif");
@@ -1372,6 +1403,8 @@ function settingsFont() {
         $('body').find("[name=raid]>td.right.value").css("font-family", "'" + change_krFont + "', 'Segoe UI', sans-serif");
     else if (localStorage.getItem('lang') == "cn")
         $('body').find("[name=raid]>td.right.value").css("font-family", "'" + change_cnFont + "', '微软雅黑', sans-serif");
+    else if (localStorage.getItem('lang') == "ct")
+        $('body').find("[name=raid]>td.right.value").css("font-family", "'" + change_ctFont + "', '微软雅黑', sans-serif");
     else if (localStorage.getItem('lang') == "jp")
         $('body').find("[name=raid]>td.right.value").css("font-family", "'" + change_jpFont + "', 'Segoe UI', sans-serif");
     else if (localStorage.getItem('lang') == "en")
@@ -1381,12 +1414,13 @@ function settingsFont() {
     $("i").css("font-family", "");
     $('#dropdown2>li#jp>label>font').css('font-family', 'Segoe UI, sans-serif');
     $('body').find(".time").css('font-family', "'" + change_timeFont + "', 'Montserrat', sans-serif");
-    $('body').find(".info").css('font-family',"'" + change_cnFont + "', '" + change_jpFont + "', '" + change_krFont + "'" + ", 'Meiryo', 'Segoe UI', 'sans-serif'");
-    $('body').find(".smallText,.tableHeader td,[name=raid] td.left").css('font-family', "'" + change_indexFont + "', 'Roboto Condensed'," + "'" + change_cnFont + "', '" + change_jpFont + "', '" + change_krFont + "', 'sans-serif'");
+    $('body').find(".info").css('font-family',"'" + change_cnFont + "', '" + change_ctFont + "', '" + change_jpFont + "', '" + change_krFont + "'" + ", 'Meiryo', 'Segoe UI', 'sans-serif'");
+    $('body').find(".smallText,.tableHeader td,[name=raid] td.left").css('font-family', "'" + change_indexFont + "', 'Roboto Condensed'," + "'" + change_cnFont + "', '" + change_ctFont + "', '" + change_jpFont + "', '" + change_krFont + "', 'sans-serif'");
     $("[name=timeFont]").val(localStorage.getItem('timeFont'));
     $("[name=indexFont]").val(localStorage.getItem('indexFont'));
     $("[name=krFont]").val(localStorage.getItem('krFont'));
     $("[name=cnFont]").val(localStorage.getItem('cnFont'));
+    $("[name=cnFont]").val(localStorage.getItem('ctFont'));
     $("[name=enFont]").val(localStorage.getItem('enFont'));
     $("[name=jpFont]").val(localStorage.getItem('jpFont'));
     $("[name=deFont]").val(localStorage.getItem('deFont'))
@@ -1716,6 +1750,9 @@ function onUpdateUserData() {
     if (localStorage.getItem("lang") == "cn") {
         $("nav [name=main]").find(".info .smallText").text("团队伤害：" + addComma(parseInt(lastCombat.Encounter.ENCDPS)) + "　团队治疗：" + addComma(parseInt(lastCombat.Encounter.ENCHPS)));
     }
+    else if (localStorage.getItem("lang") == "ct") {
+        $("nav [name=main]").find(".info .smallText").text("團隊總傷：" + addComma(parseInt(lastCombat.Encounter.ENCDPS)) + "　團隊治療：" + addComma(parseInt(lastCombat.Encounter.ENCHPS)));
+    }
     else {
         $("nav [name=main]").find(".info .smallText").text("RD " + addComma(parseInt(lastCombat.Encounter.ENCDPS)) + "　RH " + addComma(parseInt(lastCombat.Encounter.ENCHPS)));
     }
@@ -2043,6 +2080,8 @@ function inputName(name, job, rank, pet) {
                         var i = "초코보"
                     else if (localStorage.getItem("lang") == "cn")
                         var i = "陆行鸟"
+                    else if (localStorage.getItem("lang") == "ct")
+                        var i = "陆行鸟"
                     else if (localStorage.getItem("lang") == "en")
                         var i = "CHOCOBO"
                     else var i = "チョコボ"
@@ -2064,6 +2103,8 @@ function inputName(name, job, rank, pet) {
             if (localStorage.getItem("lang") == "kr")
                 var i = "초코보"
             else if (localStorage.getItem("lang") == "cn")
+                var i = "陆行鸟"
+            else if (localStorage.getItem("lang") == "ct")
                 var i = "陆行鸟"
             else if (localStorage.getItem("lang") == "en")
                 var i = "CHOCOBO"

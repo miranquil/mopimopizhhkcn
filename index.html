@@ -65,7 +65,11 @@
         </li>
         <li id="cn" onclick="radioButtonCotrol(this.id)">
             <input type="radio" class="with-gap" name="radio_lang" id="lb-cn"/>
-            <label for="lb-cn" class="rdColor"><font style="color:#fff">中文</font></label>
+            <label for="lb-cn" class="rdColor"><font style="color:#fff">简体中文</font></label>
+        </li>
+        <li id="ct" onclick="radioButtonCotrol(this.id)">
+            <input type="radio" class="with-gap" name="radio_lang" id="lb-ct"/>
+            <label for="lb-ct" class="rdColor"><font style="color:#fff">正體中文</font></label>
         </li>
         <li id="jp" onclick="radioButtonCotrol(this.id)">
             <input type="radio" class="with-gap" name="radio_lang" id="lb-jp"/>
@@ -375,6 +379,11 @@
                 2. PC用户<span class="amber-text">一定要在OverlayProc中勾选“AppRegion”</span>来限制可拖放区域。<br>
                 3. 通过<span class="amber-text">设置>备份和恢复</span>备份你的配置数据。
             </p>
+            <p class="grey1-text" lang="ct">
+                1. 菜單按鈕提醒可在<span class="amber-text">設定>其他設定</span>中關閉。<br>
+                2. PC機用戶<span class="amber-text">務必于OverlayProc激活“AppRegion”</span>來限制拖放區域。<br>
+                3. 使用<span class="amber-text">設定>備份和恢復</span>備份你的個人設置。
+            </p>
             <p class="grey1-text" lang="en">
                 1. You can turn off tooltips in Settings > Other Settings.<br>
                 2. PC Users : <span class="amber-text">OverlayProc > MUST Check "AppRegion"</span> to limit the
@@ -403,11 +412,19 @@
                       3. [Chaos [Phoenix] Shunittseru Tohka] 옵션 추가 : 독일 서버 소환수 리스트
             </p>
             <p class="grey1-text" lang="cn">
-                1. [G-mail/Rapis Ruri] 添加中文宠物支持<br>
-                2. [Chaos [Phoenix] Shunittseru Tohka] 添加德文语言支持<br>
-                3. [Chaos [Phoenix] Shunittseru Tohka] 添加德文宠物支持<br>
+                1. [G-mail/Rapis Ruri] 添加中文宠物支持。<br>
+                2. [Chaos [Phoenix] Shunittseru Tohka] 添加德文语言支持。<br>
+                3. [Chaos [Phoenix] Shunittseru Tohka] 添加德文宠物支持。<br>
                 4. [中国区 [紫水栈桥] 幽兒希卡] 添加中文语言支持。<br>
                 5. <span class="amber-text">特别感谢</span> [中国区 [紫水栈桥] 幽兒希卡丶] 的陪伴。
+            </p>
+
+            <p class="grey1-text" lang="ct">
+                1. [G-mail/Rapis Ruri] 支援中文寵物。<br>
+                2. [Chaos [Phoenix] Shunittseru Tohka] 支援德文界面。<br>
+                3. [Chaos [Phoenix] Shunittseru Tohka] 支援德文寵物。<br>
+                4. [中国区 [紫水栈桥] 幽兒希卡] 支援中文界面。<br>
+                5. <span class="amber-text">特別感謝</span> [中国区 [紫水栈桥] 幽兒希卡丶] 的陪伴。
             </p>
             <p class="grey1-text" lang="en">
                 1. [G-mail/Rapis Ruri] Add an option : Pets name list in China<br>
@@ -426,7 +443,11 @@
                 1. 亚灵神巴哈姆特笔误 <br>
                 2. 列表快速显示 <br>
                 3. [Chaos [Phoenix] Shunittseru Tohka] 小错误修正 <br>
-                4. [中国区 [紫水栈桥] 幽兒希卡] 表头中文化
+            </p>
+            <p class="grey1-text" lang="ct">
+                1. 亞靈神巴哈姆特筆誤 <br>
+                2. 快速顯示列表 <br>
+                3. [Chaos [Phoenix] Shunittseru Tohka] 小錯誤修復 <br>
             </p>
             <p class="grey1-text" lang="en">
                 1. A clerical error of Demi-Bahamut <br>
@@ -434,6 +455,7 @@
             </p>
         </div>
         <span class="white-text right" id="verDate" lang="cn">2.0.5 - 2018/3/12 基于原版1.1.9.9</span>
+        <span class="white-text right" id="verDate" lang="ct">2.0.5 - 2018/3/12 基於原版1.1.9.9</span>
         <span class="white-text right" id="verDate" lang="kr">1.1.9.9 - 2018/1/24</span>
         <span class="white-text right" id="verDate" lang="en">1.1.9.9 - 2018/1/24</span>
     </div>
@@ -2270,7 +2292,19 @@
                     <div class="input-field" class="validate">
                         <input id="cnFont" placeholder="" type="text" name="cnFont" autocomplete="off"
                                autocapitalize="off" autocorrect="off">
-                        <label for="cnFont" name="m98" class="active"></label>
+                        <label for="cnFont" name="m275" class="active"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tile" style="cursor: default">
+            <div class="row">
+                <div class="col s12">
+                    <div class="input-field" class="validate">
+                        <input id="ctFont" placeholder="" type="text" name="ctFont" autocomplete="off"
+                               autocapitalize="off" autocorrect="off">
+                        <label for="ctFont" name="m276" class="active"></label>
                     </div>
                 </div>
             </div>
