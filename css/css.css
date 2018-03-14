@@ -25,3 +25,10 @@
     font-weight: 400;
     src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(https://fonts.gstatic.com/s/robotocondensed/v16/Zd2E9abXLFGSr9G3YK2MsFzqCfRpIA3W6ypxnPISCPA.woff) format('woff');
 }
+
+@font-face {
+    font-family: '文泉驿微米黑';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/WQ_WYMH.woff") format('woff')
+}

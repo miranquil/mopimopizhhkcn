@@ -91,7 +91,7 @@ var inputSettings = {
     timeFont: 'Montserrat',
     krFont: 'Segoe UI',
     cnFont: '微软雅黑',
-    ctFont: '微软雅黑',
+    ctFont: '文泉驿微米黑',
     jpFont: 'Meiryo',
     enFont: 'Roboto',
     deFont: 'Segoe UI',
@@ -1395,7 +1395,7 @@ function settingsFont() {
         localStorage.setItem('deFont', 'Segoe UI'); else localStorage.setItem('deFont', change_deFont);
     $(":lang(kr)").css("font-family", "'" + change_krFont + "', 'Segoe UI', sans-serif");
     $(":lang(cn)").css("font-family", "'" + change_cnFont + "', '微软雅黑', sans-serif");
-    $(":lang(ct)").css("font-family", "'" + change_ctFont + "', '微软雅黑', sans-serif");
+    $(":lang(ct)").css("font-family", "'" + change_ctFont + "', '文泉驿微米黑', sans-serif");
     $(":lang(jp)").css("font-family", "'" + change_jpFont + "', 'Meiryo', sans-serif");
     $(":lang(en)").css("font-family", "'" + change_enFont + "', 'Roboto', sans-serif");
     $(":lang(de)").css("font-family", "'" + change_deFont + "', 'Segoe UI', sans-serif");
@@ -1404,7 +1404,7 @@ function settingsFont() {
     else if (localStorage.getItem('lang') == "cn")
         $('body').find("[name=raid]>td.right.value").css("font-family", "'" + change_cnFont + "', '微软雅黑', sans-serif");
     else if (localStorage.getItem('lang') == "ct")
-        $('body').find("[name=raid]>td.right.value").css("font-family", "'" + change_ctFont + "', '微软雅黑', sans-serif");
+        $('body').find("[name=raid]>td.right.value").css("font-family", "'" + change_ctFont + "', '文泉驿微米黑', sans-serif");
     else if (localStorage.getItem('lang') == "jp")
         $('body').find("[name=raid]>td.right.value").css("font-family", "'" + change_jpFont + "', 'Segoe UI', sans-serif");
     else if (localStorage.getItem('lang') == "en")
@@ -1420,7 +1420,7 @@ function settingsFont() {
     $("[name=indexFont]").val(localStorage.getItem('indexFont'));
     $("[name=krFont]").val(localStorage.getItem('krFont'));
     $("[name=cnFont]").val(localStorage.getItem('cnFont'));
-    $("[name=cnFont]").val(localStorage.getItem('ctFont'));
+    $("[name=ctFont]").val(localStorage.getItem('ctFont'));
     $("[name=enFont]").val(localStorage.getItem('enFont'));
     $("[name=jpFont]").val(localStorage.getItem('jpFont'));
     $("[name=deFont]").val(localStorage.getItem('deFont'))
