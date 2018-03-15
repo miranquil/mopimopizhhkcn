@@ -3,8 +3,6 @@ MopiMopi template for plugin "WebSocket" of Advanced Combat Tracker, translated 
 
 ## Basic Info
 
----
-
 URL: https://yorushika.gitlab.io/ACT.WebSocket.Template.MopiMopi/
 
 Original Author: HAERU
@@ -12,8 +10,6 @@ Original Author: HAERU
 Translation(Chinese)/Optimization: [Yorushika](mailto:jeremiahshi@outlook.com)
 
 ## Warning
-
----
 
 The slash line at the end of URL is **NECESSARY**! 
 
