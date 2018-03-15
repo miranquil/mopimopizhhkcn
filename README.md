@@ -1,7 +1,7 @@
 # ACT.WebSocket.Template.MopiMopi Chinese Version
 MopiMopi template for plugin "WebSocket" of Advanced Combat Tracker, translated into Chinese with some function optimized.
 
-##Basic Info##
+###Basic Info
 
 ---
 
@@ -11,7 +11,7 @@ Original Author: HAERU
 
 Translation(Chinese)/Optimization: [Yorushika](mailto:jeremiahshi@outlook.com)
 
-##Warning##
+###Warning
 
 ---
 
