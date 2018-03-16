@@ -15,7 +15,7 @@ The slash line at the end of URL is **NECESSARY**!
 
 Which means your URL in WebSocket should be something like **this**: 
 
-https://yorushika.gitlab.io/ACT.WebSocket.Template.MopiMopi?***/***HOST_PORT=ws://127.0.0.1:10501/
+https://yorushika.gitlab.io/ACT.WebSocket.Template.MopiMopi***/***?HOST_PORT=ws://127.0.0.1:10501/
 
 Instead of:
 
