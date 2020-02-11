@@ -21,6 +21,7 @@ var palette = {
     tank1: '7B9AA2',
     tank2: 'A91A16',
     tank3: '682531',
+    tank4: '796D30',
     heal1: 'BDBDBD',
     heal2: '32307B',
     heal3: 'B1561C',
@@ -35,6 +36,7 @@ var palette = {
     dps7: '148AA9',
     dps8: 'E45A0F',
     dps9: 'AC2997',
+    dps10: 'E2B0AF',
     life1: '353535',
     life2: '353535',
     ava: '000000',
@@ -2319,6 +2321,8 @@ function inputColor(a) {
                 return '#' + localStorage.getItem("tank2");
             case 'DRK':
                 return '#' + localStorage.getItem("tank3");
+            case 'GNB':
+                return '#' + localStorage.getItem("tank4");
             case 'WHM':
             case 'CNJ':
                 return '#' + localStorage.getItem("heal1");
@@ -2345,6 +2349,8 @@ function inputColor(a) {
                 return '#' + localStorage.getItem("dps5");
             case 'RDM':
                 return '#' + localStorage.getItem("dps9");
+            case 'DNC':
+                return '#' + localStorage.getItem("dps10");
             case 'BRD':
             case 'ARC':
                 return '#' + localStorage.getItem("dps6");

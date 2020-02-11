@@ -970,6 +970,7 @@ function Language(l) {
         "BRD": "吟游诗人",
         "ARC": "弓箭手",
         "MCH": "机工士",
+        "DNC": "舞者",
         "SMN": "召唤师",
         "THM": "咒术师",
         "BLM": "黑魔法师",
